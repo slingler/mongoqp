@@ -27,6 +27,11 @@ function() {
     if (this.op === "command") {
         var command = Object.keys(this.command)[0];
 
+        // Ignore non-string commands (f.e. "$eval", "dbstats", "collStats", "profile")
+        if (typeof(this.command[command]) != "string") {
+            return;
+        }
+
         // Ignore commands targetting system collections
         if (this.command[command].substr(0, 7) === "system.") {
             return;
