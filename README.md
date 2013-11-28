@@ -85,7 +85,7 @@ the `twig.cache_dir` configuration option.
 The application can be started using:
 
 ```
-$ php -S localhost:8080 -t web web/index.php
+$ php -S 0.0.0.0:8080 -t /path/to/mongoqp/web /path/to/mongoqp/web/index.php
 ```
 
 Instructions for other web server configurations are outlined in the
