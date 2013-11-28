@@ -36,6 +36,13 @@ is also published as a package, which means it can be installed with:
 $ composer create-project jmikola/mongoqp
 ```
 
+If this does not work because composer is throwing a `TransportException` while downloading `symfony/Routing/zipball`, you might also try the following:
+
+```
+$ git clone git://github.com/jmikola/mongoqp.git /path/to/mongoqp
+$ composer install -d /path/to/mongoqp
+````
+
 ### Configuration
 
 The `src/` directory includes a `config.php.dist` file, which may be copied
